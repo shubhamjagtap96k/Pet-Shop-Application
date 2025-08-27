@@ -1,7 +1,8 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 public enum TransactionStatus {
     PENDING,
     COMPLETED,
-    CANCELLED
+    CANCELLED,
+    REFUNDED
 }

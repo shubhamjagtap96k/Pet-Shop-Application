@@ -1,7 +1,11 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -10,19 +14,21 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GroomingService {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "service_id")
-    private Integer id;
+    private Integer serviceId;
 
     @Column(name = "name", length = 100)
     private String name;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    private Double price;
+    @Column(name = "price", precision = 10, scale = 2)
+    private BigDecimal price;
+
+    @Column(name = "available")
     private Boolean available;
 
     @ManyToMany(mappedBy = "groomingServices")

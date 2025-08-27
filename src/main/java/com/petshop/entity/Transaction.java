@@ -1,7 +1,11 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
@@ -10,11 +14,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Transaction {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "transaction_id")
-    private Integer id;
+    private Integer transactionId;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
@@ -27,9 +30,10 @@ public class Transaction {
     @Column(name = "transaction_date")
     private LocalDate transactionDate;
 
-    private Double amount;
+    @Column(name = "amount", precision = 10, scale = 2)
+    private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "transaction_status")
-    private TransactionStatus status;
+    private TransactionStatus transactionStatus;
 }

@@ -1,7 +1,10 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 @Entity
@@ -10,15 +13,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PetCategory {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id")
-    private Integer id;
+    private Integer categoryId;
 
-    @Column(length = 50)
+    @Column(name = "name", length = 50)
     private String name;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Pet> pets;
 }

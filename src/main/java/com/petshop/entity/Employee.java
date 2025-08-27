@@ -1,7 +1,10 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,11 +14,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Employee {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_id")
-    private Integer id;
+    private Integer employeeId;
 
     @Column(name = "first_name", length = 50)
     private String firstName;
@@ -23,7 +25,7 @@ public class Employee {
     @Column(name = "last_name", length = 50)
     private String lastName;
 
-    @Column(length = 50)
+    @Column(name = "position", length = 50)
     private String position;
 
     @Column(name = "hire_date")
@@ -32,18 +34,13 @@ public class Employee {
     @Column(name = "phone_number", length = 20)
     private String phoneNumber;
 
-    @Column(length = 100)
+    @Column(name = "email", length = 100)
     private String email;
 
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @ManyToMany
-    @JoinTable(
-            name = "employee_pet_relationship",
-            joinColumns = @JoinColumn(name = "employee_id"),
-            inverseJoinColumns = @JoinColumn(name = "pet_id")
-    )
+    @ManyToMany(mappedBy = "employees")
     private List<Pet> pets;
 }

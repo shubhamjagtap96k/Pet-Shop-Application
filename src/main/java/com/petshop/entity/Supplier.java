@@ -1,7 +1,10 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 @Entity
@@ -10,13 +13,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Supplier {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "supplier_id")
-    private Integer id;
+    private Integer supplierId;
 
-    @Column(length = 100)
+    @Column(name = "name", length = 100)
     private String name;
 
     @Column(name = "contact_person", length = 50)
@@ -25,7 +27,7 @@ public class Supplier {
     @Column(name = "phone_number", length = 20)
     private String phoneNumber;
 
-    @Column(length = 100)
+    @Column(name = "email", length = 100)
     private String email;
 
     @ManyToOne

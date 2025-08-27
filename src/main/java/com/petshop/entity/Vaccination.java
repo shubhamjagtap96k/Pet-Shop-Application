@@ -1,7 +1,10 @@
-package com.petShop.model;
+package com.petshop.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 @Entity
@@ -10,20 +13,16 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Vaccination {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "vaccination_id")
-    private Integer id;
+    private Integer vaccinationId;
 
-    @Column(length = 100)
+    @Column(name = "name", length = 100)
     private String name;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
-
-    private Double price;
-    private Boolean available;
 
     @ManyToMany(mappedBy = "vaccinations")
     private List<Pet> pets;
