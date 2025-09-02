@@ -256,7 +256,7 @@ For production, implement:
 - JWT authentication
 - Role-based access control
 - API rate limiting
-- Input sanitization
+- Input sanity and Dependency
 
 ## Development Tips
 
