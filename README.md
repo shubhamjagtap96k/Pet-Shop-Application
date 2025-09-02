@@ -57,7 +57,7 @@ The application implements the following main entities:
 - Java 17 or higher
 - Maven 3.6+
 - MySQL 8.0+ (for production)
-- IDE (IntelliJ IDEA, Eclipse, or VS Code)
+- IDE (IntelliJ IDEA, Eclipse, STS or VS Code)
 
 ## Setup Instructions
 
