@@ -187,7 +187,7 @@ When running with the `dev` profile, you can access the H2 database console at:
 `http://localhost:8080/h2-console`
 
 - JDBC URL: `jdbc:h2:mem:testdb`
-- Username: `sa`
+- Username: `admin`
 - Password: (leave empty)
 
 ### Sample Data
