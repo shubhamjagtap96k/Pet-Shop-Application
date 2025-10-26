@@ -22,6 +22,7 @@ A comprehensive Spring Boot REST API for managing a pet shop business, including
 - **Mapping**: MapStruct
 - **Build Tool**: Maven
 - **Java Version**: 17+
+- Use of java 8 features 
 
 ## Project Structure
 
