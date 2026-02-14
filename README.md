@@ -298,6 +298,7 @@ For production, implement:
    ```bash
    # Clean and rebuild
    mvn clean install -U
+   this will the final command that we have to use
    ```
 
 ## Future Enhancements
