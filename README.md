@@ -6,9 +6,9 @@ A comprehensive Spring Boot REST API for managing a pet shop business, including
 
 - **Pet Management**: CRUD operations for pets with categories, breeds, and pricing
 - **Customer Management**: Customer registration and profile management
-- **Employee Management**: Staff information and role management
+- **Employee Management**: Staff information added and role management
 - **Supplier Management**: Supplier contact and relationship tracking
-- **Transaction Tracking**: Sales and payment processing
+- **Transaction Tracking**: Sales and payment management processing
 - **Service Management**: Grooming services and vaccination records
 - **Inventory Management**: Pet food and supplies tracking
 
