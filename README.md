@@ -20,7 +20,7 @@ A comprehensive Spring Boot REST API for managing a pet shop business, including
 - **Security**: Spring Security and authentication
 - **Validation**: Bean Validation (Jakarta Validation)
 - **Mapping**: MapStruct
-- **Build Tool**: Maven
+- **Build Tool**: Maven 
 - **Java Version**: 17+
 - Use of java 8 features 
 
