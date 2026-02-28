@@ -1,6 +1,6 @@
 # Pet Shop Management System - Backend API
 
-A comprehensive Spring Boot REST API for managing a pet shop business, including pets, customers, employees, suppliers, transactions, and various services.
+A comprehensive Spring Boot REST API for managing a pet shop business,  including pets, customers, employees, suppliers, transactions, and various services.
 
 ## Features
 
