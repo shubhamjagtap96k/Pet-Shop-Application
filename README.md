@@ -16,7 +16,7 @@ A comprehensive Spring Boot REST API for managing a pet shop business,  includin
 
 - **Framework**: Spring Boot 3.2.0
 - **Database**: MySQL (primary), H2 (testing)
-- **ORM**: Spring Data JPA with Hibernate
+- **ORM**: Spring Data JPA with Hibernate and spring boot
 - **Security**: Spring Security and authentication
 - **Validation**: Bean Validation (Jakarta Validation)
 - **Mapping**: MapStruct
